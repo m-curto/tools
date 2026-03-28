@@ -15,19 +15,25 @@ personal tools that cost me time now in order to save time later.
 
 <a name="name-description"></a>
 # Name & Description
-| Name              | Description                                                                                |
-| -------------     |:------------------------------------------------------------------------------------------:|
-| fclean_all        | Go through each folder recursively, find a Makefile, and try running `make fclean`         |
-| fclean_alldocker  | Removes all Docker resources on the machine (images,networks...), but keeps local volumes. |
-| ❌fvscode_all     | Go through each folder recursively, and `rm -rf .vscode`                                   |
-| fgit              | Repair current repo when you run `error: object file .git/objects/*/* is empty`            |
-| fdiscord          | Install Discord via `wget` .deb (because i hate snap)                                      |
-| ftetrio           | Install Tetr.io via `wget` .deb (+ config.ttc/4w.ttp inside)                               |
-| fprotonVPN        | Install ProtonVPN via `wget` .deb                                                          |
-| fanydesk          | Install AnyDesk via `wget` .deb OR official repo                                           |
-| fue5              | Launch Unreal Engine 5 from terminal                                                       |
-| ❌fobs            | Install OBS correctly on Ubuntu                                                            |
-| ❌fdocker         | Install `docker` or `docker compose` (need `sudo usermod -aG docker $USER`)                |
+| Name                 | Description                                                                                |
+| -------------        |:------------------------------------------------------------------------------------------:|
+| fclean_all           | Go through each folder recursively, find a Makefile, and try running `make fclean`         |
+| fclean_alldocker     | Removes all Docker resources on the machine (images,networks...), but keeps local volumes. |
+| ❌fvscode_all        | Go through each folder recursively, and `rm -rf .vscode`                                   |
+| fgit                 | Repair current repo when you run `error: object file .git/objects/*/* is empty`            |
+| fdiscord             | Install Discord via `wget` .deb (because i hate snap)                                      |
+| ftetrio              | Install Tetr.io via `wget` .deb (+ config.ttc/4w.ttp inside)                               |
+| fprotonVPN           | Install ProtonVPN via `wget` .deb                                                          |
+| fparsec              | Install Parsec via `wget` .deb                                                             |
+| fanydesk             | Install AnyDesk via `wget` .deb OR official repo                                           |
+| ❌fraylib            | Install raylib                                                                             |
+| fue5                 | Launch Unreal Engine 5 from terminal                                                       |
+| fcolors              | Print all colors. (Need to compile colors.cpp first)                                       |
+| ft8                  | Print desired Tekken 8 character's weakness sidestepside (Need to compile t8.cpp first)    |
+| fterminal-guillotine | [Remove the topbar from terminal](https://github.com/safesintesi/terminal-guillotine)      |
+| ❌fobs               | Install OBS correctly on Ubuntu                                                            |
+| ❌fdocker            | Install `docker` or `docker compose` (need `sudo usermod -aG docker $USER`)                |
+| fsandbox             | Container for making things (cf. fsandbox/README.md)                                       |
 
 <a name="guide"></a>
 # quick guide to implement scripts 🌱
@@ -88,3 +94,4 @@ Now you can run it directly:
 - [ ] fobs need logic switch pulseaudio/pipewire
 - [ ] fobs patch install pipewire
 - [ ] fdocker I don’t remember if it worked, I think it was broken back then.
+- [ ] fraylib. Make it more useful/easier to edit with a target directory + warning about installed dependencies.

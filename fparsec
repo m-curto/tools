@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+DEB_URL="https://builds.parsec.app/package/parsec-linux.deb"
+TMP_DEB="/tmp/parsec_latest.deb"
+
+wget -O "$TMP_DEB" "$DEB_URL"
+
+sudo apt update
+sudo apt install -y "$TMP_DEB"
+
+rm "$TMP_DEB"

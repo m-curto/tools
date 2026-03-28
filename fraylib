@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <required/build>"
+    exit 1
+fi
+
+PROMPT="$1"
+
+if [ "$PROMPT" != "required" ] && [ "$PROMPT" != "build" ]; then
+    echo "Error : $PROMPT. <required/build>"
+    exit 2
+fi
+
+if [ "$PROMPT" = "required" ]; then
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt install build-essential git
+    sudo apt install libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev
+    exit 0
+fi
+
+if [ "$PROMPT" = "build" ]; then
+    git clone --depth 1 https://github.com/raysan5/raylib.git raylib
+    cd raylib/src/
+    make PLATFORM=PLATFORM_DESKTOP # To make the static version.
+    # make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED # To make the dynamic shared version.
+fi

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+wget https://raw.githubusercontent.com/safesintesi/terminal-guillotine/main/guillotine.sh -qO- | bash
